@@ -1,0 +1,820 @@
+Device: cuda
+Loading data for classes 0 to 19...
+Using 50.0% of dataset
+Train samples: 12998 (50.0%)
+Val samples: 500 (50.0%)
+⚠️ WARNING: Requested loaders for retain classes (20-99). Make sure you are not using this for TRAINING!
+Loading data for classes 20 to 99...
+Using 50.0% of dataset
+Train samples: 51690 (50.0%)
+Val samples: 2000 (50.0%)
+Before freezing:
+  Total params: 5.54M | Trainable params: 5.54M (100.00%)
+After freezing:
+  Total params: 5.54M | Trainable params: 0.44M (8.02%)
+Initial Val - Forget Acc: 82.00% | Forget Loss: 0.7071 | Retain Acc: 70.60% | Retain Loss: 1.0548
+
+Epoch 1/200
+Train - Forget Acc: 16.30% | Avg Loss: 5.5449 | Forget Loss: 5.5633
+Val   - Forget Acc: 0.10% | Forget Loss: 7.9935 | Retain Acc: 63.08% | Retain Loss: 1.6822
+✅ Saved best (epoch 1) with Val Forget Acc: 0.10% and Retain Acc: 63.08%
+
+Epoch 2/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.4282 | Forget Loss: 0.4291
+Val   - Forget Acc: 0.00% | Forget Loss: 7.6542 | Retain Acc: 65.88% | Retain Loss: 2.5713
+✅ Saved best (epoch 2) with Val Forget Acc: 0.00% and Retain Acc: 65.88%
+
+Epoch 3/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.2212 | Forget Loss: 0.2212
+Val   - Forget Acc: 0.00% | Forget Loss: 7.3955 | Retain Acc: 66.22% | Retain Loss: 2.9991
+
+Epoch 4/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.1854 | Forget Loss: 0.1855
+Val   - Forget Acc: 0.00% | Forget Loss: 7.0807 | Retain Acc: 64.70% | Retain Loss: 3.2573
+
+Epoch 5/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.1658 | Forget Loss: 0.1659
+Val   - Forget Acc: 0.00% | Forget Loss: 6.8928 | Retain Acc: 62.72% | Retain Loss: 3.4169
+
+Epoch 6/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.1491 | Forget Loss: 0.1492
+Val   - Forget Acc: 0.00% | Forget Loss: 6.7175 | Retain Acc: 61.20% | Retain Loss: 3.5237
+
+Epoch 7/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.1343 | Forget Loss: 0.1343
+Val   - Forget Acc: 0.00% | Forget Loss: 6.5572 | Retain Acc: 59.52% | Retain Loss: 3.6029
+
+Epoch 8/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.1176 | Forget Loss: 0.1175
+Val   - Forget Acc: 0.00% | Forget Loss: 6.4882 | Retain Acc: 58.33% | Retain Loss: 3.6560
+
+Epoch 9/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0994 | Forget Loss: 0.0995
+Val   - Forget Acc: 0.00% | Forget Loss: 6.5812 | Retain Acc: 57.20% | Retain Loss: 3.6924
+
+Epoch 10/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0859 | Forget Loss: 0.0859
+Val   - Forget Acc: 0.00% | Forget Loss: 6.7131 | Retain Acc: 56.15% | Retain Loss: 3.7081
+
+Epoch 11/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0755 | Forget Loss: 0.0755
+Val   - Forget Acc: 0.00% | Forget Loss: 6.8688 | Retain Acc: 55.97% | Retain Loss: 3.7184
+
+Epoch 12/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0672 | Forget Loss: 0.0672
+Val   - Forget Acc: 0.00% | Forget Loss: 7.0233 | Retain Acc: 56.70% | Retain Loss: 3.7236
+
+Epoch 13/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0611 | Forget Loss: 0.0611
+Val   - Forget Acc: 0.00% | Forget Loss: 7.1660 | Retain Acc: 56.67% | Retain Loss: 3.7329
+
+Epoch 14/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0561 | Forget Loss: 0.0561
+Val   - Forget Acc: 0.00% | Forget Loss: 7.2852 | Retain Acc: 57.15% | Retain Loss: 3.7498
+
+Epoch 15/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0519 | Forget Loss: 0.0520
+Val   - Forget Acc: 0.00% | Forget Loss: 7.4055 | Retain Acc: 56.95% | Retain Loss: 3.7660
+
+Epoch 16/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0486 | Forget Loss: 0.0486
+Val   - Forget Acc: 0.00% | Forget Loss: 7.4999 | Retain Acc: 56.75% | Retain Loss: 3.7852
+
+Epoch 17/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0454 | Forget Loss: 0.0454
+Val   - Forget Acc: 0.00% | Forget Loss: 7.5819 | Retain Acc: 56.73% | Retain Loss: 3.8047
+
+Epoch 18/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0426 | Forget Loss: 0.0426
+Val   - Forget Acc: 0.00% | Forget Loss: 7.6764 | Retain Acc: 56.62% | Retain Loss: 3.8254
+
+Epoch 19/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0399 | Forget Loss: 0.0400
+Val   - Forget Acc: 0.00% | Forget Loss: 7.7631 | Retain Acc: 56.30% | Retain Loss: 3.8443
+
+Epoch 20/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0376 | Forget Loss: 0.0376
+Val   - Forget Acc: 0.20% | Forget Loss: 7.8564 | Retain Acc: 55.33% | Retain Loss: 3.8691
+
+Epoch 21/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0356 | Forget Loss: 0.0356
+Val   - Forget Acc: 0.20% | Forget Loss: 7.9582 | Retain Acc: 55.27% | Retain Loss: 3.8878
+
+Epoch 22/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0335 | Forget Loss: 0.0336
+Val   - Forget Acc: 0.10% | Forget Loss: 8.0169 | Retain Acc: 54.62% | Retain Loss: 3.9177
+
+Epoch 23/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0317 | Forget Loss: 0.0318
+Val   - Forget Acc: 0.10% | Forget Loss: 8.1359 | Retain Acc: 54.20% | Retain Loss: 3.9356
+
+Epoch 24/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0302 | Forget Loss: 0.0301
+Val   - Forget Acc: 0.10% | Forget Loss: 8.2170 | Retain Acc: 53.42% | Retain Loss: 3.9552
+
+Epoch 25/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0285 | Forget Loss: 0.0285
+Val   - Forget Acc: 0.10% | Forget Loss: 8.3122 | Retain Acc: 53.17% | Retain Loss: 3.9811
+
+Epoch 26/200
+Train - Forget Acc: 0.02% | Avg Loss: 0.0273 | Forget Loss: 0.0272
+Val   - Forget Acc: 0.10% | Forget Loss: 8.4178 | Retain Acc: 52.68% | Retain Loss: 3.9959
+
+Epoch 27/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0256 | Forget Loss: 0.0256
+Val   - Forget Acc: 0.10% | Forget Loss: 8.4834 | Retain Acc: 52.08% | Retain Loss: 4.0273
+
+Epoch 28/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0245 | Forget Loss: 0.0245
+Val   - Forget Acc: 0.00% | Forget Loss: 8.6013 | Retain Acc: 52.45% | Retain Loss: 4.0405
+
+Epoch 29/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0233 | Forget Loss: 0.0233
+Val   - Forget Acc: 0.00% | Forget Loss: 8.6937 | Retain Acc: 52.18% | Retain Loss: 4.0614
+
+Epoch 30/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0221 | Forget Loss: 0.0221
+Val   - Forget Acc: 0.00% | Forget Loss: 8.7457 | Retain Acc: 51.58% | Retain Loss: 4.0850
+
+Epoch 31/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0209 | Forget Loss: 0.0209
+Val   - Forget Acc: 0.00% | Forget Loss: 8.8752 | Retain Acc: 52.18% | Retain Loss: 4.0992
+
+Epoch 32/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0202 | Forget Loss: 0.0201
+Val   - Forget Acc: 0.00% | Forget Loss: 8.9773 | Retain Acc: 51.45% | Retain Loss: 4.1150
+
+Epoch 33/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0189 | Forget Loss: 0.0190
+Val   - Forget Acc: 0.00% | Forget Loss: 9.0588 | Retain Acc: 51.20% | Retain Loss: 4.1321
+
+Epoch 34/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0181 | Forget Loss: 0.0181
+Val   - Forget Acc: 0.00% | Forget Loss: 9.1363 | Retain Acc: 50.85% | Retain Loss: 4.1451
+
+Epoch 35/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0175 | Forget Loss: 0.0175
+Val   - Forget Acc: 0.00% | Forget Loss: 9.2803 | Retain Acc: 49.95% | Retain Loss: 4.1556
+
+Epoch 36/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0169 | Forget Loss: 0.0169
+Val   - Forget Acc: 0.00% | Forget Loss: 9.3467 | Retain Acc: 49.93% | Retain Loss: 4.1722
+
+Epoch 37/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0160 | Forget Loss: 0.0160
+Val   - Forget Acc: 0.00% | Forget Loss: 9.4479 | Retain Acc: 50.12% | Retain Loss: 4.1789
+
+Epoch 38/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0152 | Forget Loss: 0.0152
+Val   - Forget Acc: 0.00% | Forget Loss: 9.5105 | Retain Acc: 49.48% | Retain Loss: 4.1939
+
+Epoch 39/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0150 | Forget Loss: 0.0149
+Val   - Forget Acc: 0.00% | Forget Loss: 9.6409 | Retain Acc: 48.65% | Retain Loss: 4.2034
+
+Epoch 40/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0142 | Forget Loss: 0.0142
+Val   - Forget Acc: 0.00% | Forget Loss: 9.7626 | Retain Acc: 49.43% | Retain Loss: 4.2029
+
+Epoch 41/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0136 | Forget Loss: 0.0136
+Val   - Forget Acc: 0.00% | Forget Loss: 9.8446 | Retain Acc: 48.88% | Retain Loss: 4.2106
+
+Epoch 42/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0132 | Forget Loss: 0.0132
+Val   - Forget Acc: 0.00% | Forget Loss: 9.8103 | Retain Acc: 47.50% | Retain Loss: 4.2296
+
+Epoch 43/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0125 | Forget Loss: 0.0126
+Val   - Forget Acc: 0.00% | Forget Loss: 9.9116 | Retain Acc: 46.48% | Retain Loss: 4.2502
+
+Epoch 44/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0122 | Forget Loss: 0.0123
+Val   - Forget Acc: 0.00% | Forget Loss: 10.0029 | Retain Acc: 46.48% | Retain Loss: 4.2436
+
+Epoch 45/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0119 | Forget Loss: 0.0119
+Val   - Forget Acc: 0.00% | Forget Loss: 9.9809 | Retain Acc: 45.48% | Retain Loss: 4.2724
+
+Epoch 46/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0112 | Forget Loss: 0.0113
+Val   - Forget Acc: 0.00% | Forget Loss: 10.1296 | Retain Acc: 45.60% | Retain Loss: 4.2718
+
+Epoch 47/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0111 | Forget Loss: 0.0110
+Val   - Forget Acc: 0.00% | Forget Loss: 10.2598 | Retain Acc: 44.60% | Retain Loss: 4.2669
+
+Epoch 48/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0104 | Forget Loss: 0.0105
+Val   - Forget Acc: 0.00% | Forget Loss: 10.2598 | Retain Acc: 43.70% | Retain Loss: 4.2778
+
+Epoch 49/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0099 | Forget Loss: 0.0099
+Val   - Forget Acc: 0.00% | Forget Loss: 10.2274 | Retain Acc: 43.10% | Retain Loss: 4.2899
+
+Epoch 50/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0096 | Forget Loss: 0.0096
+Val   - Forget Acc: 0.00% | Forget Loss: 10.2653 | Retain Acc: 42.12% | Retain Loss: 4.3009
+
+Epoch 51/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0093 | Forget Loss: 0.0093
+Val   - Forget Acc: 0.00% | Forget Loss: 10.4350 | Retain Acc: 41.98% | Retain Loss: 4.2971
+
+Epoch 52/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0091 | Forget Loss: 0.0091
+Val   - Forget Acc: 0.00% | Forget Loss: 10.6027 | Retain Acc: 40.38% | Retain Loss: 4.3058
+
+Epoch 53/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0088 | Forget Loss: 0.0088
+Val   - Forget Acc: 0.10% | Forget Loss: 10.5460 | Retain Acc: 40.95% | Retain Loss: 4.3000
+
+Epoch 54/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0086 | Forget Loss: 0.0086
+Val   - Forget Acc: 0.10% | Forget Loss: 10.5479 | Retain Acc: 40.90% | Retain Loss: 4.3064
+
+Epoch 55/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0080 | Forget Loss: 0.0081
+Val   - Forget Acc: 0.10% | Forget Loss: 10.8381 | Retain Acc: 43.77% | Retain Loss: 4.2876
+
+Epoch 56/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0081 | Forget Loss: 0.0081
+Val   - Forget Acc: 0.10% | Forget Loss: 10.6903 | Retain Acc: 39.85% | Retain Loss: 4.3221
+
+Epoch 57/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0077 | Forget Loss: 0.0077
+Val   - Forget Acc: 0.10% | Forget Loss: 10.7171 | Retain Acc: 40.35% | Retain Loss: 4.3208
+
+Epoch 58/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0072 | Forget Loss: 0.0072
+Val   - Forget Acc: 0.10% | Forget Loss: 10.8308 | Retain Acc: 40.02% | Retain Loss: 4.3315
+
+Epoch 59/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0070 | Forget Loss: 0.0070
+Val   - Forget Acc: 0.10% | Forget Loss: 10.8748 | Retain Acc: 39.48% | Retain Loss: 4.3245
+
+Epoch 60/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0069 | Forget Loss: 0.0069
+Val   - Forget Acc: 0.10% | Forget Loss: 10.6937 | Retain Acc: 39.35% | Retain Loss: 4.3427
+
+Epoch 61/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0069 | Forget Loss: 0.0070
+Val   - Forget Acc: 0.10% | Forget Loss: 10.8926 | Retain Acc: 38.10% | Retain Loss: 4.3522
+
+Epoch 62/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0066 | Forget Loss: 0.0066
+Val   - Forget Acc: 0.10% | Forget Loss: 11.0411 | Retain Acc: 40.85% | Retain Loss: 4.3229
+
+Epoch 63/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0063 | Forget Loss: 0.0063
+Val   - Forget Acc: 0.10% | Forget Loss: 10.8185 | Retain Acc: 38.40% | Retain Loss: 4.3678
+
+Epoch 64/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0062 | Forget Loss: 0.0062
+Val   - Forget Acc: 0.10% | Forget Loss: 10.9550 | Retain Acc: 40.27% | Retain Loss: 4.3458
+
+Epoch 65/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0059 | Forget Loss: 0.0059
+Val   - Forget Acc: 0.10% | Forget Loss: 11.2213 | Retain Acc: 40.27% | Retain Loss: 4.3477
+
+Epoch 66/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0058 | Forget Loss: 0.0058
+Val   - Forget Acc: 0.10% | Forget Loss: 11.1627 | Retain Acc: 39.48% | Retain Loss: 4.3497
+
+Epoch 67/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0057 | Forget Loss: 0.0057
+Val   - Forget Acc: 0.10% | Forget Loss: 10.9128 | Retain Acc: 36.65% | Retain Loss: 4.3946
+
+Epoch 68/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0057 | Forget Loss: 0.0057
+Val   - Forget Acc: 0.10% | Forget Loss: 11.2245 | Retain Acc: 38.62% | Retain Loss: 4.3774
+
+Epoch 69/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0057 | Forget Loss: 0.0057
+Val   - Forget Acc: 0.20% | Forget Loss: 11.1466 | Retain Acc: 38.80% | Retain Loss: 4.3736
+
+Epoch 70/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0054 | Forget Loss: 0.0053
+Val   - Forget Acc: 0.10% | Forget Loss: 11.3602 | Retain Acc: 40.12% | Retain Loss: 4.3620
+
+Epoch 71/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0052 | Forget Loss: 0.0052
+Val   - Forget Acc: 0.10% | Forget Loss: 11.2335 | Retain Acc: 36.98% | Retain Loss: 4.3878
+
+Epoch 72/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0054 | Forget Loss: 0.0054
+Val   - Forget Acc: 0.10% | Forget Loss: 11.2826 | Retain Acc: 38.40% | Retain Loss: 4.3834
+
+Epoch 73/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0053 | Forget Loss: 0.0052
+Val   - Forget Acc: 0.20% | Forget Loss: 11.2930 | Retain Acc: 37.43% | Retain Loss: 4.3828
+
+Epoch 74/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0052 | Forget Loss: 0.0052
+Val   - Forget Acc: 0.10% | Forget Loss: 11.3183 | Retain Acc: 38.85% | Retain Loss: 4.3822
+
+Epoch 75/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0052 | Forget Loss: 0.0052
+Val   - Forget Acc: 0.10% | Forget Loss: 11.3595 | Retain Acc: 38.95% | Retain Loss: 4.3736
+
+Epoch 76/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0048 | Forget Loss: 0.0048
+Val   - Forget Acc: 0.10% | Forget Loss: 11.4943 | Retain Acc: 38.62% | Retain Loss: 4.3719
+
+Epoch 77/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0046 | Forget Loss: 0.0046
+Val   - Forget Acc: 0.30% | Forget Loss: 11.3266 | Retain Acc: 36.33% | Retain Loss: 4.4017
+
+Epoch 78/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0048 | Forget Loss: 0.0048
+Val   - Forget Acc: 0.10% | Forget Loss: 11.4738 | Retain Acc: 37.28% | Retain Loss: 4.3862
+
+Epoch 79/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0047 | Forget Loss: 0.0047
+Val   - Forget Acc: 0.40% | Forget Loss: 11.4049 | Retain Acc: 37.12% | Retain Loss: 4.3835
+
+Epoch 80/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0046 | Forget Loss: 0.0046
+Val   - Forget Acc: 0.20% | Forget Loss: 11.4392 | Retain Acc: 39.00% | Retain Loss: 4.3696
+
+Epoch 81/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0046 | Forget Loss: 0.0046
+Val   - Forget Acc: 0.20% | Forget Loss: 11.4794 | Retain Acc: 37.70% | Retain Loss: 4.3773
+
+Epoch 82/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0045 | Forget Loss: 0.0045
+Val   - Forget Acc: 0.40% | Forget Loss: 11.4529 | Retain Acc: 38.48% | Retain Loss: 4.3811
+
+Epoch 83/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0045 | Forget Loss: 0.0045
+Val   - Forget Acc: 0.20% | Forget Loss: 11.3406 | Retain Acc: 36.80% | Retain Loss: 4.4017
+
+Epoch 84/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0042 | Forget Loss: 0.0042
+Val   - Forget Acc: 0.40% | Forget Loss: 11.5361 | Retain Acc: 38.75% | Retain Loss: 4.3808
+
+Epoch 85/200
+Train - Forget Acc: 0.02% | Avg Loss: 0.0043 | Forget Loss: 0.0043
+Val   - Forget Acc: 0.30% | Forget Loss: 11.5340 | Retain Acc: 37.35% | Retain Loss: 4.3937
+
+Epoch 86/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0045 | Forget Loss: 0.0045
+Val   - Forget Acc: 0.20% | Forget Loss: 11.6188 | Retain Acc: 38.12% | Retain Loss: 4.3859
+
+Epoch 87/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0044 | Forget Loss: 0.0044
+Val   - Forget Acc: 0.00% | Forget Loss: 11.6146 | Retain Acc: 37.35% | Retain Loss: 4.3921
+
+Epoch 88/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0041 | Forget Loss: 0.0041
+Val   - Forget Acc: 0.20% | Forget Loss: 11.5488 | Retain Acc: 37.35% | Retain Loss: 4.3927
+
+Epoch 89/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0042 | Forget Loss: 0.0042
+Val   - Forget Acc: 0.20% | Forget Loss: 11.4928 | Retain Acc: 36.38% | Retain Loss: 4.4013
+
+Epoch 90/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0042 | Forget Loss: 0.0042
+Val   - Forget Acc: 0.10% | Forget Loss: 11.6671 | Retain Acc: 38.20% | Retain Loss: 4.3830
+
+Epoch 91/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0043 | Forget Loss: 0.0043
+Val   - Forget Acc: 0.10% | Forget Loss: 11.6178 | Retain Acc: 38.48% | Retain Loss: 4.3958
+
+Epoch 92/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0041 | Forget Loss: 0.0041
+Val   - Forget Acc: 0.10% | Forget Loss: 11.6302 | Retain Acc: 38.45% | Retain Loss: 4.3981
+
+Epoch 93/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0041 | Forget Loss: 0.0041
+Val   - Forget Acc: 0.30% | Forget Loss: 11.8027 | Retain Acc: 39.98% | Retain Loss: 4.3710
+
+Epoch 94/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0039 | Forget Loss: 0.0039
+Val   - Forget Acc: 0.20% | Forget Loss: 11.5724 | Retain Acc: 37.38% | Retain Loss: 4.4118
+
+Epoch 95/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0042 | Forget Loss: 0.0042
+Val   - Forget Acc: 0.40% | Forget Loss: 11.7189 | Retain Acc: 37.35% | Retain Loss: 4.3987
+
+Epoch 96/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0039 | Forget Loss: 0.0039
+Val   - Forget Acc: 0.20% | Forget Loss: 11.7310 | Retain Acc: 37.03% | Retain Loss: 4.3967
+
+Epoch 97/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0040 | Forget Loss: 0.0040
+Val   - Forget Acc: 0.10% | Forget Loss: 11.5274 | Retain Acc: 37.88% | Retain Loss: 4.3971
+
+Epoch 98/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0039 | Forget Loss: 0.0039
+Val   - Forget Acc: 0.10% | Forget Loss: 11.7863 | Retain Acc: 38.67% | Retain Loss: 4.3847
+
+Epoch 99/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0036 | Forget Loss: 0.0036
+Val   - Forget Acc: 0.00% | Forget Loss: 11.9260 | Retain Acc: 39.65% | Retain Loss: 4.3760
+
+Epoch 100/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0038 | Forget Loss: 0.0038
+Val   - Forget Acc: 0.20% | Forget Loss: 11.8119 | Retain Acc: 38.10% | Retain Loss: 4.3891
+
+Epoch 101/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0036 | Forget Loss: 0.0036
+Val   - Forget Acc: 0.30% | Forget Loss: 11.8112 | Retain Acc: 37.18% | Retain Loss: 4.3949
+
+Epoch 102/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0037 | Forget Loss: 0.0037
+Val   - Forget Acc: 0.30% | Forget Loss: 11.8813 | Retain Acc: 37.57% | Retain Loss: 4.3907
+
+Epoch 103/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0037 | Forget Loss: 0.0037
+Val   - Forget Acc: 0.30% | Forget Loss: 11.9115 | Retain Acc: 38.73% | Retain Loss: 4.3695
+
+Epoch 104/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0038 | Forget Loss: 0.0038
+Val   - Forget Acc: 0.30% | Forget Loss: 11.8653 | Retain Acc: 36.18% | Retain Loss: 4.3906
+
+Epoch 105/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0035 | Forget Loss: 0.0035
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0357 | Retain Acc: 37.23% | Retain Loss: 4.3786
+
+Epoch 106/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0036 | Forget Loss: 0.0036
+Val   - Forget Acc: 0.10% | Forget Loss: 11.8332 | Retain Acc: 36.70% | Retain Loss: 4.3951
+
+Epoch 107/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0037 | Forget Loss: 0.0037
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9599 | Retain Acc: 36.08% | Retain Loss: 4.3947
+
+Epoch 108/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0036 | Forget Loss: 0.0036
+Val   - Forget Acc: 0.20% | Forget Loss: 11.6944 | Retain Acc: 35.77% | Retain Loss: 4.4117
+
+Epoch 109/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0035 | Forget Loss: 0.0035
+Val   - Forget Acc: 0.30% | Forget Loss: 11.8333 | Retain Acc: 35.73% | Retain Loss: 4.3998
+
+Epoch 110/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0035 | Forget Loss: 0.0035
+Val   - Forget Acc: 0.10% | Forget Loss: 11.8115 | Retain Acc: 37.12% | Retain Loss: 4.4101
+
+Epoch 111/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0036 | Forget Loss: 0.0035
+Val   - Forget Acc: 0.20% | Forget Loss: 11.8509 | Retain Acc: 36.65% | Retain Loss: 4.4040
+
+Epoch 112/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0037 | Forget Loss: 0.0037
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0051 | Retain Acc: 36.85% | Retain Loss: 4.3933
+
+Epoch 113/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0035 | Forget Loss: 0.0035
+Val   - Forget Acc: 0.10% | Forget Loss: 11.8350 | Retain Acc: 35.62% | Retain Loss: 4.4143
+
+Epoch 114/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0034 | Forget Loss: 0.0034
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9147 | Retain Acc: 37.48% | Retain Loss: 4.4011
+
+Epoch 115/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0035 | Forget Loss: 0.0035
+Val   - Forget Acc: 0.30% | Forget Loss: 12.1082 | Retain Acc: 37.92% | Retain Loss: 4.3870
+
+Epoch 116/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.60% | Forget Loss: 11.9305 | Retain Acc: 36.38% | Retain Loss: 4.4084
+
+Epoch 117/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0034 | Forget Loss: 0.0034
+Val   - Forget Acc: 0.40% | Forget Loss: 11.9154 | Retain Acc: 36.48% | Retain Loss: 4.4091
+
+Epoch 118/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.40% | Forget Loss: 12.0830 | Retain Acc: 39.35% | Retain Loss: 4.3865
+
+Epoch 119/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0032 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.60% | Forget Loss: 11.8045 | Retain Acc: 35.98% | Retain Loss: 4.4130
+
+Epoch 120/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0034 | Forget Loss: 0.0034
+Val   - Forget Acc: 0.50% | Forget Loss: 11.8978 | Retain Acc: 37.82% | Retain Loss: 4.3996
+
+Epoch 121/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0034 | Forget Loss: 0.0034
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0083 | Retain Acc: 38.62% | Retain Loss: 4.3859
+
+Epoch 122/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0014 | Retain Acc: 38.60% | Retain Loss: 4.3954
+
+Epoch 123/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0356 | Retain Acc: 37.40% | Retain Loss: 4.4012
+
+Epoch 124/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0032 | Forget Loss: 0.0031
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0924 | Retain Acc: 38.57% | Retain Loss: 4.3856
+
+Epoch 125/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.10% | Forget Loss: 11.8006 | Retain Acc: 34.98% | Retain Loss: 4.4167
+
+Epoch 126/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9624 | Retain Acc: 36.33% | Retain Loss: 4.4094
+
+Epoch 127/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0031 | Forget Loss: 0.0031
+Val   - Forget Acc: 0.10% | Forget Loss: 12.1038 | Retain Acc: 38.65% | Retain Loss: 4.3859
+
+Epoch 128/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0032 | Forget Loss: 0.0032
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0142 | Retain Acc: 36.08% | Retain Loss: 4.3970
+
+Epoch 129/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0266 | Retain Acc: 37.65% | Retain Loss: 4.3963
+
+Epoch 130/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0797 | Retain Acc: 37.05% | Retain Loss: 4.3887
+
+Epoch 131/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0033 | Forget Loss: 0.0033
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0140 | Retain Acc: 36.80% | Retain Loss: 4.4047
+
+Epoch 132/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0031 | Forget Loss: 0.0031
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9802 | Retain Acc: 37.75% | Retain Loss: 4.3891
+
+Epoch 133/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0032 | Forget Loss: 0.0032
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0155 | Retain Acc: 36.50% | Retain Loss: 4.4008
+
+Epoch 134/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0784 | Retain Acc: 38.30% | Retain Loss: 4.3893
+
+Epoch 135/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0101 | Retain Acc: 36.23% | Retain Loss: 4.4000
+
+Epoch 136/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0031 | Forget Loss: 0.0032
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0938 | Retain Acc: 37.38% | Retain Loss: 4.3963
+
+Epoch 137/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0031
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0903 | Retain Acc: 36.55% | Retain Loss: 4.3990
+
+Epoch 138/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0292 | Retain Acc: 36.00% | Retain Loss: 4.4124
+
+Epoch 139/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0031 | Forget Loss: 0.0031
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0617 | Retain Acc: 35.83% | Retain Loss: 4.4040
+
+Epoch 140/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0031 | Forget Loss: 0.0032
+Val   - Forget Acc: 0.40% | Forget Loss: 11.9513 | Retain Acc: 35.50% | Retain Loss: 4.4098
+
+Epoch 141/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.30% | Forget Loss: 11.9357 | Retain Acc: 36.70% | Retain Loss: 4.4067
+
+Epoch 142/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.20% | Forget Loss: 11.8194 | Retain Acc: 35.27% | Retain Loss: 4.4092
+
+Epoch 143/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9518 | Retain Acc: 36.12% | Retain Loss: 4.3961
+
+Epoch 144/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9458 | Retain Acc: 37.62% | Retain Loss: 4.3898
+
+Epoch 145/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9301 | Retain Acc: 34.85% | Retain Loss: 4.4020
+
+Epoch 146/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0337 | Retain Acc: 37.62% | Retain Loss: 4.3891
+
+Epoch 147/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0158 | Retain Acc: 35.83% | Retain Loss: 4.4090
+
+Epoch 148/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9130 | Retain Acc: 34.40% | Retain Loss: 4.3969
+
+Epoch 149/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9781 | Retain Acc: 35.90% | Retain Loss: 4.3967
+
+Epoch 150/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0878 | Retain Acc: 35.77% | Retain Loss: 4.3984
+
+Epoch 151/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9299 | Retain Acc: 34.83% | Retain Loss: 4.4062
+
+Epoch 152/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9290 | Retain Acc: 34.85% | Retain Loss: 4.4128
+
+Epoch 153/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0031 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0349 | Retain Acc: 34.65% | Retain Loss: 4.3927
+
+Epoch 154/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.00% | Forget Loss: 11.9301 | Retain Acc: 35.48% | Retain Loss: 4.4056
+
+Epoch 155/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0029 | Forget Loss: 0.0029
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0140 | Retain Acc: 34.12% | Retain Loss: 4.4137
+
+Epoch 156/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.10% | Forget Loss: 11.8616 | Retain Acc: 36.48% | Retain Loss: 4.4024
+
+Epoch 157/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0156 | Retain Acc: 36.55% | Retain Loss: 4.3919
+
+Epoch 158/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0030 | Forget Loss: 0.0030
+Val   - Forget Acc: 0.00% | Forget Loss: 12.1558 | Retain Acc: 38.07% | Retain Loss: 4.3758
+
+Epoch 159/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9290 | Retain Acc: 36.20% | Retain Loss: 4.4071
+
+Epoch 160/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.30% | Forget Loss: 12.1072 | Retain Acc: 35.60% | Retain Loss: 4.3976
+
+Epoch 161/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.20% | Forget Loss: 12.1535 | Retain Acc: 36.25% | Retain Loss: 4.3885
+
+Epoch 162/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.10% | Forget Loss: 12.1257 | Retain Acc: 36.48% | Retain Loss: 4.3820
+
+Epoch 163/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0034 | Retain Acc: 34.85% | Retain Loss: 4.4130
+
+Epoch 164/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0225 | Retain Acc: 34.05% | Retain Loss: 4.4022
+
+Epoch 165/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0273 | Retain Acc: 35.70% | Retain Loss: 4.4013
+
+Epoch 166/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.40% | Forget Loss: 12.0810 | Retain Acc: 34.12% | Retain Loss: 4.4023
+
+Epoch 167/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.30% | Forget Loss: 12.1431 | Retain Acc: 38.30% | Retain Loss: 4.3759
+
+Epoch 168/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0244 | Retain Acc: 36.90% | Retain Loss: 4.3914
+
+Epoch 169/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0024
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9545 | Retain Acc: 35.10% | Retain Loss: 4.4043
+
+Epoch 170/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0087 | Retain Acc: 33.60% | Retain Loss: 4.3957
+
+Epoch 171/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0520 | Retain Acc: 36.50% | Retain Loss: 4.3974
+
+Epoch 172/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0027 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.30% | Forget Loss: 12.0862 | Retain Acc: 37.40% | Retain Loss: 4.3797
+
+Epoch 173/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0805 | Retain Acc: 34.15% | Retain Loss: 4.4030
+
+Epoch 174/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.30% | Forget Loss: 12.2232 | Retain Acc: 37.67% | Retain Loss: 4.3768
+
+Epoch 175/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0026 | Forget Loss: 0.0027
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0563 | Retain Acc: 36.38% | Retain Loss: 4.3950
+
+Epoch 176/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0028 | Forget Loss: 0.0028
+Val   - Forget Acc: 0.40% | Forget Loss: 12.0022 | Retain Acc: 35.12% | Retain Loss: 4.3943
+
+Epoch 177/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0822 | Retain Acc: 36.95% | Retain Loss: 4.3863
+
+Epoch 178/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0866 | Retain Acc: 37.03% | Retain Loss: 4.3848
+
+Epoch 179/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0577 | Retain Acc: 36.02% | Retain Loss: 4.3880
+
+Epoch 180/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9432 | Retain Acc: 34.95% | Retain Loss: 4.4086
+
+Epoch 181/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0024
+Val   - Forget Acc: 0.20% | Forget Loss: 11.9972 | Retain Acc: 34.85% | Retain Loss: 4.4017
+
+Epoch 182/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.20% | Forget Loss: 12.1424 | Retain Acc: 36.68% | Retain Loss: 4.3806
+
+Epoch 183/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.10% | Forget Loss: 12.1666 | Retain Acc: 35.58% | Retain Loss: 4.3770
+
+Epoch 184/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.20% | Forget Loss: 11.8942 | Retain Acc: 34.90% | Retain Loss: 4.4032
+
+Epoch 185/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0140 | Retain Acc: 35.02% | Retain Loss: 4.3908
+
+Epoch 186/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.00% | Forget Loss: 12.0011 | Retain Acc: 34.38% | Retain Loss: 4.3874
+
+Epoch 187/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.20% | Forget Loss: 12.1379 | Retain Acc: 35.38% | Retain Loss: 4.3879
+
+Epoch 188/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9271 | Retain Acc: 34.40% | Retain Loss: 4.4084
+
+Epoch 189/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0024 | Forget Loss: 0.0024
+Val   - Forget Acc: 0.40% | Forget Loss: 12.0218 | Retain Acc: 36.48% | Retain Loss: 4.3962
+
+Epoch 190/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0024 | Forget Loss: 0.0024
+Val   - Forget Acc: 0.40% | Forget Loss: 12.0184 | Retain Acc: 34.73% | Retain Loss: 4.3958
+
+Epoch 191/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0024 | Forget Loss: 0.0024
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0428 | Retain Acc: 35.75% | Retain Loss: 4.3895
+
+Epoch 192/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0023 | Forget Loss: 0.0023
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0565 | Retain Acc: 34.17% | Retain Loss: 4.3981
+
+Epoch 193/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0026 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.00% | Forget Loss: 12.1838 | Retain Acc: 34.12% | Retain Loss: 4.3767
+
+Epoch 194/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.10% | Forget Loss: 11.8331 | Retain Acc: 34.17% | Retain Loss: 4.4157
+
+Epoch 195/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.10% | Forget Loss: 12.0350 | Retain Acc: 36.43% | Retain Loss: 4.3946
+
+Epoch 196/200
+Train - Forget Acc: 0.01% | Avg Loss: 0.0026 | Forget Loss: 0.0026
+Val   - Forget Acc: 0.20% | Forget Loss: 12.0055 | Retain Acc: 35.60% | Retain Loss: 4.3951
+
+Epoch 197/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0024 | Forget Loss: 0.0024
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9924 | Retain Acc: 34.90% | Retain Loss: 4.3956
+
+Epoch 198/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0024 | Forget Loss: 0.0023
+Val   - Forget Acc: 0.10% | Forget Loss: 11.9649 | Retain Acc: 35.80% | Retain Loss: 4.4013
+
+Epoch 199/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0022 | Forget Loss: 0.0022
+Val   - Forget Acc: 0.20% | Forget Loss: 12.1663 | Retain Acc: 37.05% | Retain Loss: 4.3852
+
+Epoch 200/200
+Train - Forget Acc: 0.00% | Avg Loss: 0.0025 | Forget Loss: 0.0025
+Val   - Forget Acc: 0.20% | Forget Loss: 12.3229 | Retain Acc: 39.20% | Retain Loss: 4.3690
+
+Training complete!
+Best Val Forget Acc: 0.00% at epoch 2

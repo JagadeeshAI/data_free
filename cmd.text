@@ -1,0 +1,2 @@
+conda activate ml_env
+export PYTHONPATH=$(pwd)
