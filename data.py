@@ -119,7 +119,7 @@ def get_loaders(batch_size=BATCH_SIZE, num_workers=4, start_range=0, end_range=9
         train_subset, 
         batch_size=batch_size, 
         shuffle=True, 
-        num_workers=num_workers,
+        num_workers=20,
         pin_memory=True
     )
     
@@ -127,7 +127,7 @@ def get_loaders(batch_size=BATCH_SIZE, num_workers=4, start_range=0, end_range=9
         val_dataset, 
         batch_size=batch_size, 
         shuffle=False, 
-        num_workers=num_workers,
+        num_workers=20,
         pin_memory=True
     )
     

@@ -7,66 +7,88 @@ import torch.nn as nn
 def count_params(model):
     total = sum(p.numel() for p in model.parameters())
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    return total, trainable, total / 1e6, trainable / 1e6  # raw + Millions
+    print(f"  Total params: {total/1e6:.2f}M | Trainable: {trainable/1e6:.2f}M "
+          f"({(trainable/total)*100:.2f}%)")
+    return total, trainable
 
 
 # -------------------------
-# Freeze N-1 blocks, unfreeze only FFN (fc1, fc2) of last block
+# Freeze N-1 blocks, unfreeze only FFN of last block
 # -------------------------
-def freeze_n_1(model):
+
+def freeze_n_1(model, num_unfreeze: int = 1):
     """
-    Freeze all transformer blocks except the last one.
-    Inside the last block, only unfreeze the FFN (mlp.fc1, mlp.fc2).
+    Freeze all transformer blocks except the last `num_unfreeze` blocks.
+    Unfreeze both attention + MLP inside those blocks.
     Keep classifier head frozen.
-    Works for timm ViT models like vit_tiny_patch16_224.
     """
     print("Before freezing:")
-    total, trainable, total_m, trainable_m = count_params(model)
-    print(f"  Total params: {total_m:.2f}M | Trainable params: {trainable_m:.2f}M "
-          f"({(trainable/total)*100:.2f}%)")
+    count_params(model)
 
-    # Freeze all params
     for p in model.parameters():
         p.requires_grad = False
 
-    # Unfreeze mlp.fc1 and mlp.fc2 of last block
     if hasattr(model, "blocks"):
-        last_block = model.blocks[-1]
-        if hasattr(last_block, "mlp"):
-            for name in ["fc1", "fc2"]:
-                if hasattr(last_block.mlp, name):
-                    for p in getattr(last_block.mlp, name).parameters():
-                        p.requires_grad = True
-        else:
-            raise AttributeError("Last block has no mlp submodule")
+        if num_unfreeze > len(model.blocks):
+            raise ValueError(f"Model has {len(model.blocks)} blocks, requested {num_unfreeze}.")
+        for i in range(-num_unfreeze, 0):
+            for p in model.blocks[i].parameters():
+                p.requires_grad = True
     else:
-        raise AttributeError("Model does not have `blocks` attribute. Check architecture.")
+        raise AttributeError("Model missing `blocks` attr (not a ViT).")
+
+    if hasattr(model, "head"):
+        for p in model.head.parameters():
+            p.requires_grad = False
+    if hasattr(model, "fc"):  # fallback
+        for p in model.fc.parameters():
+            p.requires_grad = False
 
     print("After freezing:")
-    total, trainable, total_m, trainable_m = count_params(model)
-    print(f"  Total params: {total_m:.2f}M | Trainable params: {trainable_m:.2f}M "
-          f"({(trainable/total)*100:.2f}%)")
+    count_params(model)
 
     return model
 
-def kl_to_uniform_loss(logits):
+
+# -------------------------
+# Loss functions
+# -------------------------
+def retain_loss_fn(outputs, labels):
+    return nn.CrossEntropyLoss()(outputs, labels)
+
+
+def forget_loss_fn(outputs, labels):
+    ce_loss = nn.CrossEntropyLoss(reduction="none")(outputs, labels)
+    return torch.relu(8.0 - ce_loss).mean()
+
+
+# -------------------------
+# Jag_Reg with normalization
+# -------------------------
+class Jag_Reg(nn.Module):
     """
-    KL(p || U) where U is uniform. Minimizing this increases entropy of p.
-    Analytic expression: KL = sum p log p + log C
-    We return mean KL over batch (torch scalar).
+    Penalize deviation between student and teacher across last `num_blocks`.
+    Normalized so scale of reg_loss is stable.
     """
-    probs = torch.softmax(logits, dim=1)
-    log_probs = torch.log_softmax(logits, dim=1)
-    C = logits.shape[1]
-    kl = (probs * log_probs).sum(dim=1) + torch.log(torch.tensor(float(C), device=logits.device))
-    return kl.mean()
+    def __init__(self, teacher, student, num_blocks=1, p=2):
+        super(Jag_Reg, self).__init__()
+        self.p = p
+        self.teacher_blocks = teacher.blocks[-num_blocks:]
+        self.student_blocks = student.blocks[-num_blocks:]
 
+        for block in self.teacher_blocks:
+            for param in block.parameters():
+                param.requires_grad = False
 
-def forget_loss(outputs, labels):
-    """Custom forgetting loss: ReLU(110 - CrossEntropy)"""
-    ce_loss = nn.CrossEntropyLoss(reduction='none')(outputs, labels)
-    return torch.relu(110 - ce_loss).mean()
-
+    def forward(self):
+        reg_loss = 0.0
+        count = 0
+        for t_block, s_block in zip(self.teacher_blocks, self.student_blocks):
+            for (_, t_param), (_, s_param) in zip(t_block.named_parameters(),
+                                                 s_block.named_parameters()):
+                reg_loss += torch.norm(s_param - t_param, p=self.p)
+                count += 1
+        return reg_loss / (count + 1e-8)
 
 def kl_to_complement_loss(logits, labels):
     """
@@ -89,36 +111,49 @@ def kl_to_complement_loss(logits, labels):
     return kl.mean()
 
 
+import torch
+import torch.nn.functional as F
 
-class Jag_Reg(nn.Module):
+def strong_kl_complement_loss(logits, labels, alpha=0.01, beta=5.0, gamma=0.1, use_reverse=False):
     """
-    Regularizer to penalize deviation between student and teacher FFN (mlp.fc1, mlp.fc2)
-    of the last transformer block.
+    Stronger forgetting loss:
+    Combines KL-to-complement, margin penalty, squared KL, and entropy.
+    
+    Args:
+        logits: [batch_size, num_classes]
+        labels: [batch_size]
+        alpha: margin threshold for true class probability
+        beta: weight for margin penalty
+        gamma: weight for entropy reward
+        use_reverse: if True, also adds reverse KL(q||p)
     """
-    def __init__(self, teacher, student, block_idx=-1, p=2):
-        super(Jag_Reg, self).__init__()
-        self.block_idx = block_idx
-        self.p = p  # norm: 1 = L1, 2 = L2
-        # store references to teacher + student last block FFN
-        self.teacher_ffn = teacher.blocks[block_idx].mlp
-        self.student_ffn = student.blocks[block_idx].mlp
+    probs = F.softmax(logits, dim=1)          # p
+    log_probs = F.log_softmax(logits, dim=1)  # log p
+    C = logits.shape[1]
 
-        # Freeze teacher parameters (safety)
-        for p in self.teacher_ffn.parameters():
-            p.requires_grad = False
+    # Complement distribution q
+    q = torch.full_like(probs, 1.0 / (C - 1))     # uniform over wrong classes
+    q.scatter_(1, labels.unsqueeze(1), 0.0)       # zero on true class
 
-    def forward(self):
-        reg_loss = 0.0
-        # compare fc1 and fc2
-        for name in ["fc1", "fc2"]:
-            if hasattr(self.teacher_ffn, name) and hasattr(self.student_ffn, name):
-                t_w = getattr(self.teacher_ffn, name).weight
-                s_w = getattr(self.student_ffn, name).weight
-                reg_loss = reg_loss + torch.norm(s_w - t_w, p=self.p)
+    # Forward KL(p||q)
+    log_q = torch.log(q + 1e-12)                  # stability
+    kl_forward = (probs * (log_probs - log_q)).sum(dim=1)  # [batch]
 
-                # also include biases if they exist
-                if getattr(self.teacher_ffn, name).bias is not None:
-                    t_b = getattr(self.teacher_ffn, name).bias
-                    s_b = getattr(self.student_ffn, name).bias
-                    reg_loss = reg_loss + torch.norm(s_b - t_b, p=self.p)
-        return reg_loss
+    # (Optional) Reverse KL(q||p)
+    if use_reverse:
+        kl_reverse = (q * (torch.log(q + 1e-12) - log_probs)).sum(dim=1)
+        kl = kl_forward + kl_reverse
+    else:
+        kl = kl_forward
+
+    # Margin penalty: force p_true < alpha
+    p_true = probs.gather(1, labels.unsqueeze(1)).squeeze(1)
+    margin_penalty = F.relu(p_true - alpha)
+
+    # Entropy term (maximize uncertainty)
+    entropy = -(probs * log_probs).sum(dim=1)
+
+    # Final loss (mean over batch)
+    loss = kl.mean() + beta * margin_penalty.mean()  + (kl ** 2).mean() - gamma * entropy.mean()
+
+    return loss
