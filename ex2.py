@@ -10,7 +10,7 @@ import sys
 sys.path.append('..')
 
 from data import get_loaders
-from utils import freeze_n_1, Jag_Reg, kl_to_complement_loss
+from utils import freeze_n_1, Jag_Reg, kl_to_complement_loss,count_params
 
 
 def train_one_epoch_unlearning(student, forget_loader, optimizer, device, jag_reg=None, lambda_reg=1e-3):
@@ -104,16 +104,18 @@ def main():
     student.load_state_dict(teacher.state_dict())
     student = student.to(device)
 
-    student = freeze_n_1(student)
+    # student = freeze_n_1(student)
+
+    count_params(model)
 
     # Create Jag_Reg
-    jag_reg = Jag_Reg(teacher, student, block_idx=-1, p=2).to(device)
+    jag_reg = Jag_Reg(teacher, student, p=2).to(device)
 
     trainable_params = [p for p in student.parameters() if p.requires_grad]
     optimizer = optim.AdamW(trainable_params, lr=3e-4, weight_decay=0.05)
 
     num_epochs = 20
-    lambda_reg = 5e-1
+    lambda_reg = 2e-1
     csv_file = "loss_tracking_reg3.csv"
 
     with open(csv_file, mode="w", newline="") as f:
